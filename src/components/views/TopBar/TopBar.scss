@@ -1,0 +1,34 @@
+@import "../../../styles/setings.scss";
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    a{
+        margin-top: 10px;
+        text-decoration: none;
+        color: $primary;
+        font-size: x-large;
+        margin-right: 50px;
+
+          /*przeźroczystość przycisku*/
+        background: $primaryTwo;
+        /*dopełnienie ze wszystkich stron 25px;*/
+        padding: 0.5%;
+        /*obramowanie - szerokość 2px, linia ciągła, kolor biały*/
+        border: 2px solid $primaryTwo;
+        border-radius: 3%;
+        /*kolor czcionki*/
+        color: $primary;
+        /*teraz dodamy efekt płynnego przejścia*/
+        transition: 0.5s;
+
+        &:hover{
+            background: #fff;
+            /*czcionka w kolorze tła strony*/
+            color: rgba(52,11,116,1);
+            /*możemy również zmienić rodzaj kursora, np. na "łapkę"*/
+            cursor: pointer;
+
+        }
+    }
+}

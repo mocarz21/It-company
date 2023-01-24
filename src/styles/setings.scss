@@ -1,0 +1,13 @@
+//COLOR VARIABLES
+$primary: white;
+$primaryTwo: #f69720;
+$PrimaryBackground: rgb(52,11,116);
+
+body{
+    background: $PrimaryBackground;
+    background: radial-gradient(circle, rgba(52,11,116,1) 69%, rgba(52,11,116,0.9500000683867297) 99%);
+    color: $primary;
+    margin:0;
+	padding:0;
+	height:100%;
+}

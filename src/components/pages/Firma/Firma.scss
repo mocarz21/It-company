@@ -1,0 +1,107 @@
+@import "../../../styles/setings.scss";
+
+.descriptionOne{
+    margin:0;
+    padding: 0;
+    margin-top: 2%;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    .textOne{
+        text-align: justify;
+
+        padding-right: 8%;
+        width: 50%;
+        
+        padding-left: 10%;
+        h1{
+            font-size: xx-large;
+        }
+        p{
+            font-size: x-large;
+        }
+        
+    }
+    .pictureOne{
+        display: flex;
+        min-width: 50%;
+        height: 400px;;
+        img{
+            object-fit:cover;
+            padding-left: 10%;
+        }
+        
+    }
+}
+
+.descriptionTwo{
+
+    margin:0;
+    padding: 0; 
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    .textTwo{
+        text-align: justify;
+        padding-right: 8%;
+        width: 50%;
+        
+        h1{
+            font-size: xx-large;
+        }
+        p{
+            font-size: x-large;
+        }
+        
+    }
+    .pictureTwo{
+        display: flex;
+        width: 50%;
+        height: 400px;
+        margin-left: 10%;
+
+        img{
+            object-fit:cover;
+           
+        }
+    }
+}
+.descriptionThere{
+    margin:0;
+    padding: 0;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    .textThere{
+        text-align: justify;
+        padding-right: 8%;
+        width: 50%;
+        padding-left: 10%;
+        h1{
+            font-size: xx-large;
+        }
+        p{
+            font-size: x-large;
+        }
+        
+    }
+    .pictureThere{
+        display: flex;
+        min-width: 50%;
+        
+        height: 400px;;
+        img{
+            object-fit:cover;
+            padding-left: 10%;
+        }
+    }
+}
+h1{
+    color: $primaryTwo;
+}
