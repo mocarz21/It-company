@@ -3,27 +3,23 @@ import { useSelector } from 'react-redux';
 import styles from './AllTopics.module.scss';
 import { FaForward, FaBackward} from 'react-icons/fa';
 import clsx from 'clsx';
+import { NavLink } from 'react-router-dom';
 
 
 
- function   AllTopics() {
+
+function   AllTopics() {
+
+
 
   const topics = useSelector(state => state.topics)
   let clicked = ''
-  let nextElement =  document.querySelector('.card')
+  //let nextElement =  document.querySelector('.card')
   
   let element = document.body;
   let pageWidth =getComputedStyle(element).width.slice(0,-2);
   let pageWidthWithaoutArrow = pageWidth - (0.10 * pageWidth)
  // let topicContainerWidth = getComputedStyle(nextElement,element).width.slice(0, -2)
-  
-  if( clicked !== ''){
-     
-     console.log('1')
-  }else{
-    
-    console.log('2')
-  }
   
   //let hMC = Math.ceil(pageWidthWithaoutArrow / topicContainerWidth)
 
@@ -36,12 +32,11 @@ import clsx from 'clsx';
     const leftArrow = document.getElementById('productSlider')
 
     if(clicked === -1){
-      console.log(clicked)
+      
       //clicked = hMC;
      // leftArrow.scrollLeft += pageWidthWithaoutArrow *hMC
-      console.log('tak')
     }else{
-      console.log(clicked)
+      
       leftArrow.scrollLeft -= pageWidthWithaoutArrow
     }
   }
@@ -49,7 +44,7 @@ import clsx from 'clsx';
 
   const rightB =() =>{
     clicked +=1
-    console.log(clicked)
+
     const leftArrow = document.getElementById('productSlider')
 
     // if(clicked === hMC + 1){
@@ -63,6 +58,7 @@ import clsx from 'clsx';
   }  
    
   return (
+    
     <div className={styles.productContainer}>
       <button onClick={leftB} className={clsx(styles.left , styles.arrowB)}><FaBackward/></button>
       <div id= 'productSlider' className={styles.productCards}>
@@ -75,7 +71,7 @@ import clsx from 'clsx';
                 {topic.description}
                 <div class={styles.wrapper}>
                   <div class={styles.link_wrapper}>
-                    <a href="#">Więcej informacji</a>
+                    <NavLink to={'/opis/' + topic.id}>Więcej informacji</NavLink>
                     <div class={styles.icon}>
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.832 268.832">
                         <path d="M265.17 125.577l-80-80c-4.88-4.88-12.796-4.88-17.677 0-4.882 4.882-4.882 12.796 0 17.678l58.66 58.66H12.5c-6.903 0-12.5 5.598-12.5 12.5 0 6.903 5.597 12.5 12.5 12.5h213.654l-58.66 58.662c-4.88 4.882-4.88 12.796 0 17.678 2.44 2.44 5.64 3.66 8.84 3.66s6.398-1.22 8.84-3.66l79.997-80c4.883-4.882 4.883-12.796 0-17.678z"/>

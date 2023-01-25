@@ -3,8 +3,8 @@ import Header from './components/views/Header/Header'
 import Firma from './components/pages/Firma/Firma'
 import Szkolenia from './components/pages/Szkolenia/Szkolenia'
 import Kontakt from './components/pages/Kontakt/Kontakt'
-import styles from './styles/setings.scss'
 import Footer from './components/views/Footer/Footer'
+import Opis from './components/pages/Opis/Opis'
 
 
 function App() {
@@ -15,6 +15,7 @@ function App() {
           <Route path="/" element={<Firma/>}/>
           <Route path="/szkolenia" element ={<Szkolenia/>}/>
           <Route path="/kontakt" element ={<Kontakt/>}/>
+          <Route path="/opis/:id" element = {<Opis/>}/>
         </Routes>
         <Footer/>     
     </div>

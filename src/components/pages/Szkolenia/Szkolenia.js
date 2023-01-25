@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from './Szkolenia.scss';
 import AllTopics from '../../features/AllTopics/AllTopics';
 
