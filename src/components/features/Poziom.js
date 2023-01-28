@@ -1,46 +1,45 @@
+import { useEffect } from "react";
+import styles from './Poziom/Poziom.scss'
 
+const Poziom =({id, topic})=>{
+  let lvls= [];
 
-const   Poziom =({id, topic})=>{
-
-    let lvls= [];
-    
-        for(let key in topic.lvl){
+    for(let key in topic.lvl){
         lvls.push(key)
-
+ 
     }
-    const cbd= document.querySelector(".box-lvlProgram")
-    console.log(cbd)
+
     const  show =(e)=>{ 
         e.preventDefault()
-        const abc= document.querySelector(".box-lvlProgram")
-        console.log(abc)
-
-        // if(document.querySelector('.'+ lv) ==='.'){
-        //     console.log('niema')
-        // }else{
-        //      const programLocalization = document.querySelector('.'+ lv);
-        //      programLocalization.classList.toggle('active')
-        //      console.log(programLocalization)
-        // }
-
+        const programLocalization = e.currentTarget.nextSibling
+        const boxWithActiveClass = document.querySelector('.desriptionCard')  
+        const allActive = boxWithActiveClass.querySelectorAll('.active')
+        allActive.forEach(el=>el.classList.remove('active'))
+        programLocalization.classList.toggle('active')
+        
     }
 
     return(
-        <>
-            {lvls.map(lv=>
-            <div key={id+lv} classname='box-lvlProgram'>
-                <button onClick={show}>
+        <div className="desriptionCard">
+            {lvls.map(lv=>  
+            <div key={id+lv}>
+                <button className='box-lvlProgram' onClick={show}>
                     <div className = {'lvl-'+ id}>
                         <h2>{lv}</h2>
                     </div>
                 </button>
-                <div  className={lv}>
-                    <h3>{topic.lvl[lv]}</h3>
+                <div className={lv}>
+                    <ul>
+                    {console.log(topic.lvl[lv])}
+                    {topic.lvl[lv].forEach(e=><li>{e}</li>)}
+                    </ul>    
                 </div>
             </div>
         )}
-        </> 
+        </div> 
     )
 }
 
 export default Poziom;
+
+

@@ -6,7 +6,11 @@ const initialState ={
             description: 'Szkolenia dla każdej osoby, której praca związana jest z arkuszami kalkulacyjnymi na wszystkich stopniach zaawansowania.',
             descryptionTwo:'Arkusz kalkulacyjny produkowany przez firmę Microsoft dla systemów Windows, macOS, iOS i Android. Pierwsza wersja programu przeznaczona dla systemu Windows trafiła na rynek w roku 1987 i stała się przebojem. Postępujący sukces rynkowy programu sprawił, że w roku 1993 programy pakietu Microsoft Office zostały przeprojektowane tak, by przypominać wyglądem arkusz Excel. Od wersji 5.0 wydanej w 1993 roku program zawiera wbudowany język Visual Basic. Od wersji 4.0 program dostępny jest w polskiej wersji językowej. Aplikacja jest powszechnie używana w firmach i instytucjach, a także przez użytkowników domowych. Jej główne zastosowanie to wykonywanie obliczeń (np. wydatków) zestawionych w formie tabelarycznej. W tym użyciu mają zastosowanie liczne funkcje matematyczne, finansowe i bazodanowe dostępne w programie. Istotne znaczenie ma też półautomatyczne powielanie tworzonych formuł z zastosowaniem różnych wariantów adresowania ' ,
             lvl:{
-                podstawowy: 'aaa',
+                podstawowy: ['Wprowadzenie do programu MS Excel',
+                            'Tworzenie i edycja arkuszy kalkulacyjnych',
+                            'Formatowanie komórek i arkuszy',
+                            'Podstawowe funkcje matematyczne i logiczne',
+                            'Odwołanie bezwzględne'],
                 sredniozawansowany: 'bbb',
                 zawansowany: 'ccc'
             }
