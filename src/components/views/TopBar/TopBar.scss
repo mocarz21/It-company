@@ -3,32 +3,31 @@
 .menu{
     display: flex;
     flex-direction: row;
-    a{
-        margin-top: 10px;
-        text-decoration: none;
-        color: $primary;
-        font-size: x-large;
-        margin-right: 50px;
+    font-size: xx-large;
+    margin-top: 2%;
+    margin-right:14%;
+    gap: 10%;
+        a{      
+                
+                background-color: $primaryTwo;
+                color: $primary;
+                padding: 4% 14%;
+                min-width: 30%;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 100%;
+                margin: 4px 2px;
+                border-radius: 50px;
+                border: none;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                
+                    &:hover{
+                        background-color: $primary;
+                        color: $PrimaryBackground;
+                    }
+        
+         }
 
-          /*przeźroczystość przycisku*/
-        background: $primaryTwo;
-        /*dopełnienie ze wszystkich stron 25px;*/
-        padding: 0.5%;
-        /*obramowanie - szerokość 2px, linia ciągła, kolor biały*/
-        border: 2px solid $primaryTwo;
-        border-radius: 3%;
-        /*kolor czcionki*/
-        color: $primary;
-        /*teraz dodamy efekt płynnego przejścia*/
-        transition: 0.5s;
-
-        &:hover{
-            background: #fff;
-            /*czcionka w kolorze tła strony*/
-            color: rgba(52,11,116,1);
-            /*możemy również zmienić rodzaj kursora, np. na "łapkę"*/
-            cursor: pointer;
-
-        }
-    }
 }

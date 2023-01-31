@@ -67,7 +67,7 @@ const initialState ={
         { 
             id:  '6',
             title: 'MS Outlook',
-            description: 'Obsługa poczty elektronicznej to bardzo powszechne zajęcie. Program MS Outlook posiada mechanizmy umożliwiające automatyzację tego zajęcia.',
+            description: 'Obsługa poczty elektronicznej to bardzo powszechne zajęcie. Outlook posiada mechanizmy umożliwiające automatyzację tego zajęcia.',
             descryptionTwo:'',
         },
         { 
@@ -85,7 +85,7 @@ const initialState ={
         { 
             id: '9',
             title: 'AutoCad',
-            description: 'Szkolenie AutoCAD Podstawy zorientowany jest na naukę krok po kroku – od podstaw związanych z rysowaniem elementarnych obiektów jak linie, prostokąty czy okręgi po coraz bardziej zaawansowane zagadnienia.',
+            description: 'Szkolenie zorientowane jest na naukę od podstaw związanych z rysowaniem prostych obiektów po coraz bardziej zaawansowane zagadnienia.',
             descryptionTwo:'',
             lvl:{
                 podstawowy: 'aaa',
@@ -101,25 +101,25 @@ const initialState ={
         { 
             id: '11',
             title: 'Power Bi',
-            description: ' Zbiorcza nazwa dla szeregu aplikacji i usług klasy Business Intelligence stworzonych przez Microsoft, w znacznej mierze opartych na chmurze obliczeniowej, które pomagają organizacjom gromadzić, zarządzać, przetwarzać i analizować dane',
+            description: 'Nazwa dla szeregu aplikacji i usług klasy Business Intelligence stworzonych przez Microsoft, w znacznej mierze opartych na chmurze obliczeniowej',
             descryptionTwo:'',
         },
         { 
             id: '12',
             title: 'Tworzenie stron internetowych',
-            description: 'Jasne i proste wprowadzenie do najważniejszej technologii tworzenia stron.',
+            description: 'Jasne i proste wprowadzenie do najważniejszej technologii tworzenia stron - Opanuj od podstaw tworzenie stron z użyciem HTML, CSS oraz JS.',
             descryptionTwo:'',
         },
         { 
             id: '13',
             title: 'Photoshop/Gimp',
-            description: 'Naucz się obróbki zdjęć, tworzenia materiałów graficznych i podstaw cyfrowego malowania.',
+            description: 'Program graficzny przeznaczony do tworzenia i obróbki grafiki rastrowej - Naucz się obróbki zdjęć, tworzenia materiałów graficznych.',
             descryptionTwo:'',
         },
         { 
             id: '14',
             title: 'TIK w dydaktyce',
-            description: 'Nowoczesne metody dydaktyczne, posiłkujące się treściami i narzędziami cyfrowymi, wspomagają nauczanie przez nauczyciela i uczenie się przez ucznia, nadając temu procesowi bardziej interaktywny, dynamiczny i dostosowany do współczesnej percepcji ucznia charakter, niż metody tradycyjnej szkoły.',
+            description: 'Metody dydaktyczne, posiłkujące się treściami i narzędziami cyfrowymi, wspomagają nauczanie przez nauczyciela i uczenie się przez ucznia.',
             descryptionTwo:'',
         },
         { 

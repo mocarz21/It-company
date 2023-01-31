@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import styles from './Poziom/Poziom.scss'
+import Button from '../common/Buton/Button.js'
 
 const Poziom =({id, topic})=>{
   let lvls= [];
@@ -23,11 +24,12 @@ const Poziom =({id, topic})=>{
         <div className="desriptionCard">
             {lvls.map(lv=>  
             <div key={id+lv}>
-                <button className='box-lvlProgram' onClick={show}>
+                {/* <button className='box-lvlProgram' onClick={show}>
                     <div className = {'lvl-'+ id}>
                         <h2>{lv}</h2>
                     </div>
-                </button>
+                </button> */}
+                <Button lv={lv} id={id} action={show}/>
                 <div className={lv}>
                     <ul>
                     {console.log(Object.values(topic.lvl[lv]))}
