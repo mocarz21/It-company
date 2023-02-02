@@ -63,14 +63,13 @@ function   AllTopics() {
       <button onClick={leftB} className={clsx(styles.left , styles.arrowB)}><FaBackward/></button>
       <div id= 'productSlider' className={styles.productCards}>
         {topics.map(topic=>
-        <Card key={topic.id} style={{ height: '29rem', width: '24rem' ,border: '1px solid white', margin: ' 1.3rem', padding: '1%', borderRadius: '5%', minWidth: '28%'}}>
-            <Card.Img style={{maxWidth: '100%' }}variant="top" src={`${process.env.PUBLIC_URL}/programowanie.png`} />
+        <Card key={topic.id} style={{ height: '29rem', width: '24rem' ,border: '0px solid white', margin: ' 1.3rem', padding: '1%', borderRadius: '5%', minWidth: '28%'}}>
+            <Card.Img style={{maxWidth: '100%' }}variant="top" src={`${process.env.PUBLIC_URL}/topicImg/${topic.title}.png`} />
             <Card.Body style={{position: 'relative'}}>
               <Card.Title style={{textAlign: 'center', color:'#f69720'}}><h2>{topic.title}</h2></Card.Title>
               <Card.Text>
                 {topic.description}
               </Card.Text>
-
             </Card.Body>
             <div>
                             <div class={styles.wrapper}>

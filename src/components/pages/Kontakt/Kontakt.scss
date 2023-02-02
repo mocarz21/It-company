@@ -25,6 +25,25 @@ input[name="message"] {
     width: 120%;
 }
 
+.buttonSubmit, .box-lvlProgram{
+    background-color: $primaryTwo;
+    color: $primary;
+    padding: 3% 25%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+        &:hover{
+            background-color: $primary;
+            color: $PrimaryBackground;
+        }
+}
 
 
 

@@ -2,7 +2,7 @@ import styles from './Firma.scss'
 const Firma = () => {
 
     return(
-        <>
+        <div className='descriptions'>
             <div className="descriptionOne">
                 <div className="textOne">
                     <h1>Szkolenia komputerowe</h1>
@@ -30,12 +30,13 @@ const Firma = () => {
             <div className="descriptionThere">
                 <div className="textThere">
                     <h1>Na nasze szkolenia zapewniamy również sprzęt komputerowy.</h1>
+                    <p></p>
                 </div>
-                <div className="pictureThere">
+                {/* <div className="pictureThere">
                     <img className='laptop' src= {`${process.env.PUBLIC_URL}/laptopy.png`} alt="logo"/>
-                </div>
+                </div> */}
             </div>
-        </>
+        </div>
     )
 
 }

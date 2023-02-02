@@ -32,8 +32,7 @@ const Poziom =({id, topic})=>{
                 <Button lv={lv} id={id} action={show}/>
                 <div className={lv}>
                     <ul>
-                    {console.log(Object.values(topic.lvl[lv]))}
-                    {Object.values(topic.lvl[lv]).map(e=><li key={e + 'id'}>{e}</li>)}
+                        {Object.values(topic.lvl[lv]).map(e=><li key={e + 'id'}>{e}</li>)}
                     </ul>    
                 </div>
             </div>

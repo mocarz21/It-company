@@ -8,14 +8,10 @@
     height: 100%;
     width: 100%;
     align-items: center;
-    justify-content: center;
+    justify-content:center;
     .textOne{
         text-align: justify;
-
-        padding-right: 8%;
         width: 50%;
-        
-        padding-left: 10%;
         h1{
             font-size: xx-large;
         }
@@ -26,11 +22,10 @@
     }
     .pictureOne{
         display: flex;
-        min-width: 50%;
+        justify-content:center;
         height: 400px;;
         img{
             object-fit:cover;
-            padding-left: 10%;
         }
         
     }
@@ -47,8 +42,8 @@
     justify-content: center;
     .textTwo{
         text-align: justify;
-        padding-right: 8%;
         width: 50%;
+        
         
         h1{
             font-size: xx-large;
@@ -60,9 +55,9 @@
     }
     .pictureTwo{
         display: flex;
+        justify-content:center;
         width: 50%;
         height: 400px;
-        margin-left: 10%;
 
         img{
             object-fit:cover;
@@ -73,16 +68,16 @@
 .descriptionThere{
     margin:0;
     padding: 0;
+    margin-top: 2%;
     display: flex;
     height: 100%;
     width: 100%;
     align-items: center;
-    justify-content: center;
+    justify-content:center;
+    
     .textThere{
         text-align: justify;
-        padding-right: 8%;
         width: 50%;
-        padding-left: 10%;
         h1{
             font-size: xx-large;
         }
@@ -92,16 +87,40 @@
         
     }
     .pictureThere{
-        display: flex;
-        min-width: 50%;
-        
-        height: 400px;;
+        display: block;
+        justify-content:center;
+        max-height: 20%;
+        max-width: 20%;
         img{
-            object-fit:cover;
-            padding-left: 10%;
+             object-fit:cover;
         }
+        
     }
 }
 h1{
     color: $primaryTwo;
+}
+
+@media (max-width: 767px){
+    
+    .descriptions{
+        img{
+            display:none;
+        }
+    }
+
+    .textThere, .textTwo, .textOne{
+        display: flex;
+        flex-direction: column;
+        font-size: small;
+        justify-content: center;
+        padding-right: 0;
+        
+    }
+
+    .pictureOne, .pictureTwo, .pictureThere{
+        position: absolute;
+
+    }
+
 }
