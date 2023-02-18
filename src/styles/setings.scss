@@ -3,6 +3,13 @@ $primary: white;
 $primaryTwo: #f67320;
 $PrimaryBackground: rgb(52,11,116);
 
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
 body{
     background: $PrimaryBackground;
     background: radial-gradient(circle, rgba(52,11,116,1) 69%, rgba(52,11,116,0.9500000683867297) 99%);
@@ -12,5 +19,7 @@ body{
 	height:100%;
     width: 100%;
     font-family: 'Lato', sans-serif;
-    box-sizing: content-box;
+    *, *:before, *:after {
+  box-sizing: border-box;
+}
 }

@@ -1,8 +1,9 @@
+@import "../../../styles/setings.scss";
 
 .container{
     background: rgb(52,11,116);
     background: linear-gradient(0deg, rgba(52,11,116,1) 35%, rgba(68,0,177,1) 100%);
-    height: auto;
+    height: 100%;
     width: 100%;
 
     h3{
@@ -12,8 +13,9 @@
 
 
 .logoAndMenu{
+    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
 
 
     img{
@@ -24,22 +26,21 @@
         height: auto;
         margin-top: 1%;
         margin-bottom: 1%;
-        margin-left: 12%;
+        // margin-left: 3%;
         padding: 0;
         background: white;
-        border:  1px solid white;
+        // border:  1px solid white;
         border-radius: 50%;
     }
-   
-   
 }
 
 .right{
+    width: 50%;
     display: flex;
     justify-content: flex-end;
 
      .info{
-        margin-right: 40px;
+        margin-left: 100%;
         padding-top: 1%;
     }
 }

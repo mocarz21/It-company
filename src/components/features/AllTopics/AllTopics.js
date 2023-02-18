@@ -4,59 +4,76 @@ import styles from './AllTopics.module.scss';
 import { FaForward, FaBackward} from 'react-icons/fa';
 import clsx from 'clsx';
 import { NavLink } from 'react-router-dom';
+import { useState, useRef, useEffect } from 'react';
 
 
 
 
 function   AllTopics() {
 
+// // Obsługa dotku// 
+// const [x, setX] = useState(0);
+// const [startX, setStartX] = useState(0);
+// const [endX, setEndX] = useState(0);
 
+// const productSlider = useRef();
+
+// const handleTouchStart = (e) => {
+//   setStartX(e.touches[0].clientX);
+// };
+
+// const handleTouchEnd = (e) => {
+//   setEndX(e.changedTouches[0].clientX);
+//   setX(endX - startX);
+
+//   if (x > 50) {
+//     leftB();
+//   } else if (x < -50) {
+//     rightB();
+//   }
+// };
+
+// useEffect(() => {
+//   productSlider.current.addEventListener('touchstart', handleTouchStart);
+//   productSlider.current.addEventListener('touchend', handleTouchEnd);
+
+//   return () => {
+//     productSlider.current.removeEventListener('touchstart', handleTouchStart);
+//     productSlider.current.removeEventListener('touchend', handleTouchEnd);
+//   };
+// }, []);
+
+
+//Dalej//
 
   const topics = useSelector(state => state.topics)
-  let clicked = ''
-  //let nextElement =  document.querySelector('.card')
-  
+  let clicked = '' 
   let element = document.body;
   let pageWidth =getComputedStyle(element).width.slice(0,-2);
   let pageWidthWithaoutArrow = pageWidth - (0.10 * pageWidth)
- // let topicContainerWidth = getComputedStyle(nextElement,element).width.slice(0, -2)
-  
-  //let hMC = Math.ceil(pageWidthWithaoutArrow / topicContainerWidth)
-
-  //console.log(hMC,pageWidth ,pageWidthWithaoutArrow)
-
-  
 
   const leftB = () =>{
     clicked -=1
     const leftArrow = document.getElementById('productSlider')
 
     if(clicked === -1){
-      
-      //clicked = hMC;
-     // leftArrow.scrollLeft += pageWidthWithaoutArrow *hMC
     }else{
-      
       leftArrow.scrollLeft -= pageWidthWithaoutArrow
     }
   }
-
 
   const rightB =() =>{
     clicked +=1
 
     const leftArrow = document.getElementById('productSlider')
-
-    // if(clicked === hMC + 1){
-    //   clicked = 0;
-    //   leftArrow.scrollLeft -= pageWidthWithaoutArrow * hMC
-
-    // }else{
       leftArrow.scrollLeft += pageWidthWithaoutArrow
-    // } 
     
   }  
    
+   
+
+
+
   return (
     
     <div className={styles.productContainer}>

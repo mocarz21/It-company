@@ -46,7 +46,7 @@ const Kontakt = () => {
                     </div>
                     <div className="textArea">
                         <h2>Treść wiadomości</h2>
-                        <input type="textarea" cols='50' rows="10" name="message" value={message} onChange={e=>setMessage(e.target.value)}/>
+                        <textarea cols='50' rows="10" name="message" value={message} onChange={e=>setMessage(e.target.value)}/>
                     </div>
                     <Button/>
                 </form>
