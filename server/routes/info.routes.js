@@ -1,17 +1,18 @@
 const express = require('express');
 const router = express.Router();
+const Topic = require('../models/info.model')
 
+router.get('/info', async (req,res) => {
 
-router.route('/info').get((req,res) => {
-    const db = req.db
-    db.collection('topics').find().toArray((err, data) => {
-        if (err) {
-          console.log(err);
-          res.status(500).send('Error fetching data from database');
-        } else {
-          res.json(data);
-        }
-      });
+    try{
+        res.json(await Topic.find())
+    }
+    catch(err) {
+        res.status(500).json({message: err})
+    }
+           
+   
+
 })
 
 

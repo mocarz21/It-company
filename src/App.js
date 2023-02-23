@@ -5,9 +5,25 @@ import Szkolenia from './components/pages/Szkolenia/Szkolenia'
 import Kontakt from './components/pages/Kontakt/Kontakt'
 import Footer from './components/views/Footer/Footer'
 import Opis from './components/pages/Opis/Opis'
+import { updateTopics } from './redux/subreducera'
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react'
 
 
 function App() {
+  const dispatch = useDispatch();
+  const fetchTopics = () => {
+    fetch('http://localhost:27017/api/info')
+      .then(res => res.json())
+      .then(topics => {
+        console.log('co pobiera :', topics) 
+        dispatch(updateTopics(topics))})
+      
+  }
+
+  useEffect(fetchTopics, [dispatch])
+
+
   return (
     <div className="App">
         <Header/>

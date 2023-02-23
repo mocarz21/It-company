@@ -70,10 +70,6 @@ function   AllTopics() {
     
   }  
    
-   
-
-
-
   return (
     
     <div className={styles.productContainer}>
