@@ -9,6 +9,8 @@ const Opis =()=>{
     const {id} =useParams();
     const topic = useSelector(store=>store.topics.find(ttt=>ttt.id === id ))
 
+    console.log('topic', topic)
+
 
     return(
         <>

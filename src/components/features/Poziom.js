@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import styles from './Poziom/Poziom.scss'
 import Button from '../common/Buton/Button.js'
 
@@ -19,6 +18,8 @@ const Poziom =({id, topic})=>{
         programLocalization.classList.toggle('active')
         
     }
+    // console.log( 'asd',topic)
+    // console.log('json',JSON.stringify(topic, null, 2));
 
     return(
         <div className="desriptionCard">

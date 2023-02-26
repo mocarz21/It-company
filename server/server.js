@@ -9,6 +9,7 @@ const app = express();
 app.use(cors({origin: '*'})); //nie zapominaj ustawić domeny z dostępem np: {origin: 'http://example.com'}
 app.use(morgan('tiny'));
 
+
 const homeRoutes = require('./routes/home.routes');
 const infoRoutes = require('./routes/info.routes');
 const formularzRoutes = require('./routes/formularz.routes');
@@ -20,7 +21,11 @@ const adminRoutes = require('./routes/admin.routes');
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
+  if (req.method === "OPTIONS") {
+    res.sendStatus(200);
+  } else {
+    next();
+  }
 });
 
 app.use(express.urlencoded({ extended: true }));

@@ -5,7 +5,7 @@ const Topic = require('../models/info.model')
 router.get('/info', async (req,res) => {
 
     try{
-        res.json(await Topic.find())
+        res.json(await Topic.find().populate('lvl'))
     }
     catch(err) {
         res.status(500).json({message: err})

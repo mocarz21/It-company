@@ -13,7 +13,7 @@ import { useEffect } from 'react'
 function App() {
   const dispatch = useDispatch();
   const fetchTopics = () => {
-    fetch('http://localhost:27017/api/info')
+    fetch('http://localhost:8000/api/info')
       .then(res => res.json())
       .then(topics => {
         console.log('co pobiera :', topics) 
