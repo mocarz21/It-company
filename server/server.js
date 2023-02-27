@@ -16,6 +16,8 @@ const formularzRoutes = require('./routes/formularz.routes');
 const adminRoutes = require('./routes/admin.routes');
 
 
+
+
  // pamiętaj o dokładnym ustawieniu
  app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");

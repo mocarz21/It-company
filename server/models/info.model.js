@@ -4,12 +4,12 @@ const infoSchema = new mongoose.Schema({
     _id: {type:Object},
     title: { type: String,  },
     description: {type: String},
-    descriptionTwo:{type: Number, },
-    lvl:{
-        podstawowy:{type: String},
-        sredniozawansowany:{type: String},
-        zawansowany:{type: String}
-        }
+    descryptionTwo:{type: String },
+    lvl:[{
+        podstawowy:{type: Object},
+        sredniozawansowany:{type: Object},
+        zawansowany:{type: Object}
+        }]
     
   });
 

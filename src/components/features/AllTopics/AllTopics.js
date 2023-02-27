@@ -47,10 +47,12 @@ function   AllTopics() {
 //Dalej//
 
   const topics = useSelector(state => state.topics)
+  console.log('sadasdas', topics)
   let clicked = '' 
   let element = document.body;
   let pageWidth =getComputedStyle(element).width.slice(0,-2);
   let pageWidthWithaoutArrow = pageWidth - (0.10 * pageWidth)
+
 
   const leftB = () =>{
     clicked -=1
@@ -59,6 +61,7 @@ function   AllTopics() {
     if(clicked === -1){
     }else{
       leftArrow.scrollLeft -= pageWidthWithaoutArrow
+     
     }
   }
 
@@ -67,6 +70,7 @@ function   AllTopics() {
 
     const leftArrow = document.getElementById('productSlider')
       leftArrow.scrollLeft += pageWidthWithaoutArrow
+      
     
   }  
    

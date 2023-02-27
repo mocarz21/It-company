@@ -4,7 +4,7 @@ import Button from '../common/Buton/Button.js'
 const Poziom =({id, topic})=>{
   let lvls= [];
 
-    for(let key in topic.lvl){
+    for(let key in topic.lvl[0]){
         lvls.push(key)
  
     }
@@ -25,6 +25,7 @@ const Poziom =({id, topic})=>{
         <div className="desriptionCard">
             {lvls.map(lv=>  
             <div key={id+lv}>
+                {console.log('lvl',lv)}
                 {/* <button className='box-lvlProgram' onClick={show}>
                     <div className = {'lvl-'+ id}>
                         <h2>{lv}</h2>
@@ -33,7 +34,8 @@ const Poziom =({id, topic})=>{
                 <Button lv={lv} id={id} action={show}/>
                 <div className={lv}>
                     <ul>
-                        {Object.values(topic.lvl[lv]).map(e=><li key={e + 'id'}>{e}</li>)}
+                        {console.log('topic.lvl')}
+                        {Object.values(topic.lvl[0]).map(e=><li key={e + 'id'}>{e}</li>)}
                     </ul>    
                 </div>
             </div>
