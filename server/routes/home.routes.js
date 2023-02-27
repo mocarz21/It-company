@@ -3,7 +3,10 @@ const router = express.Router();
 
 
 router.route('/').get((req,res)=>{
-    res.show('../src/index.js')
+    res.show('../build/index.html')
 })
+
+
+
 
 module.exports = router;

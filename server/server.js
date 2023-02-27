@@ -9,12 +9,20 @@ const app = express();
 app.use(cors({origin: '*'})); //nie zapominaj ustawić domeny z dostępem np: {origin: 'http://example.com'}
 app.use(morgan('tiny'));
 
+app.use('/admin',(req, res, next)=>{
+  res.send('no no no')
+  console.log('go away')
+})
+
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, '../build/index.html'));
+// });
 
 const homeRoutes = require('./routes/home.routes');
 const infoRoutes = require('./routes/info.routes');
 const formularzRoutes = require('./routes/formularz.routes');
 const adminRoutes = require('./routes/admin.routes');
-
+const authRoutes = require('./routes/auth.routes')
 
 
 
@@ -37,20 +45,24 @@ app.use('/api',homeRoutes);
 app.use('/api',infoRoutes);
 app.use('/api',formularzRoutes);
 app.use('/api',adminRoutes)
+app.use('/auth', authRoutes)
 
-app.use('/admin',(req, res, next)=>{
-  res.send('no no no')
-  console.log('go away')
+
+
+
+
+
+
+app.all('/*', function(req, res) {
+  res.sendFile(path.join(__dirname, '../build/index.html'), function(err) {
+    if (err) {
+      res.status(500).send(err)
+    }
+  })
 })
 
 app.use((req, res) => {
   res.status(404).send('404 not found...');
-});
-
-
-
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../build/index.html'));
 });
 
 // connects our backend code with the database

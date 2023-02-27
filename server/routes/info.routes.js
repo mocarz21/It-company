@@ -14,5 +14,16 @@ router.get('/info', async (req,res) => {
     }
 });
 
+router.get('/info/:search', async (req, res) => { // Do sprawdzenia pisane z głowy bez sprawdzania
+    const searchTerm = req.params.search;
+
+    try{
+        res.json(await Topic.find({ descryptionTwo: { $regex: searchTerm, $options: 'i' } }).populate('Level.lv'))
+    }
+    catch(err){
+        res.status(500).json({message: err})
+    }
+})
+
 module.exports = router;
 
