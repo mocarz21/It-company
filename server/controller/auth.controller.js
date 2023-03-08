@@ -22,5 +22,23 @@ exports.register = async (req, res) => {
 
 exports.login = async (req, res) => {
 
+    try{
+        const {login, password} = req.body
+        if(login && typeof login === 'string' && password && typeof password ==='string' ){
+            const user = await User.findOne({login})
+            if(!user){
+                req.status(400).send('login and password is incorect')   
+                }else{
+                    if(bcrypt.compareSync(password, user.password)){
+                        res.status(200).send({message: 'Login successful'})
+
+                }else{
+                    res.status(400).send('login and password is incorect')
+                }
+            }
+        }
+    }catch(err){
+        res.status(500).send({message: err.message})
+    }
 
 }
