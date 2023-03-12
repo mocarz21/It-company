@@ -6,7 +6,6 @@ const Poziom =({id, topic})=>{
 
     for(let key in topic.lvl[0]){
         lvls.push(key)
- 
     }
 
     const  show =(e)=>{ 
@@ -18,19 +17,11 @@ const Poziom =({id, topic})=>{
         programLocalization.classList.toggle('active')
         
     }
-    // console.log( 'asd',topic)
-    // console.log('json',JSON.stringify(topic, null, 2));
 
     return(
         <div className="desriptionCard">
             {lvls.map(lv=>  
             <div key={id+lv}>
-                {console.log('lvl',lv)}
-                {/* <button className='box-lvlProgram' onClick={show}>
-                    <div className = {'lvl-'+ id}>
-                        <h2>{lv}</h2>
-                    </div>
-                </button> */}
                 <Button lv={lv} id={id} action={show}/>
                 <div className={lv}>
                     <ul>

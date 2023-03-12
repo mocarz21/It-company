@@ -1,15 +1,17 @@
 const mongoose = require('mongoose');
 
 const infoSchema = new mongoose.Schema({
-    _id: {type:Object},
+    id: {type:String},
     title: { type: String,  },
     description: {type: String},
     descryptionTwo:{type: String },
-    lvl:[{
-        podstawowy:{type: Object},
-        sredniozawansowany:{type: Object},
-        zawansowany:{type: Object}
+    lvl: {
+        type: Map,
+        of: [{
+          type: Map,
+          of: [String]
         }]
+    }
     
   });
 

@@ -3,11 +3,14 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const path = require('path');
 const morgan = require('morgan');
-
+const session = require('express-session');
+const MongoStore = require('connect-mongo');
 
 const app = express();
-app.use(cors({origin: '*'})); //nie zapominaj ustawić domeny z dostępem np: {origin: 'http://example.com'}
+
 app.use(morgan('tiny'));
+app.use(session({secret: 'xyz567', store: MongoStore.create({mongoUrl: 'mongodb://localhost:27017/CompanyDB'}), cookie: {secure: process.env.NODE_ENV === 'production',}, resave: false, saveUninitialized: false}));
+app.use(cors({origin: '*'}, {credentials: true})); //nie zapominaj ustawić domeny z dostępem np: {origin: 'http://example.com'}
 
 app.use('/admin',(req, res, next)=>{
   res.send('no no no')
@@ -23,8 +26,6 @@ const infoRoutes = require('./routes/info.routes');
 const formularzRoutes = require('./routes/formularz.routes');
 const adminRoutes = require('./routes/admin.routes');
 const authRoutes = require('./routes/auth.routes')
-
-
 
  // pamiętaj o dokładnym ustawieniu
  app.use(function(req, res, next) {
@@ -46,12 +47,6 @@ app.use('/api',infoRoutes);
 app.use('/api',formularzRoutes);
 app.use('/api',adminRoutes)
 app.use('/auth', authRoutes)
-
-
-
-
-
-
 
 app.all('/*', function(req, res) {
   res.sendFile(path.join(__dirname, '../build/index.html'), function(err) {

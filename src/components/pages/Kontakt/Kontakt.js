@@ -14,7 +14,30 @@ const Kontakt = () => {
     
     const sendMessage = (e) =>{
         e.preventDefault();
-        console.log(imie, nazwaFirmy, phone, message, email);
+        
+        fetch('/api/contact', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                name: imie,
+                companyName: nazwaFirmy,
+                email: email, 
+                phone: phone, 
+                message: message
+            })
+          })
+          .then(response => response.json())
+          .then(data => {
+            // Obsługa odpowiedzi z endpointa
+            console.log(data);
+          })
+          .catch(error => {
+            // Obsługa błędów
+            console.error(error);
+          });
+
         setImie('');
         setNazwaFirmy('');
         setPhone('');

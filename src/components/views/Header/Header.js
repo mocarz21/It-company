@@ -1,7 +1,7 @@
 import TopBar from '../TopBar/TopBar';
 import styles from './Header.module.scss';
 
-const Header =() =>{
+const Header =({visible,action}) =>{
 
     return(
         <>
@@ -14,7 +14,7 @@ const Header =() =>{
                             <h3 className='infoName'>adammocarski22@gmail.com</h3>
                         </div>   
                     </div>    
-                <TopBar/>    
+                <TopBar visible={visible} action={action}/>    
                 </div>
         </header>
         </>

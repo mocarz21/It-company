@@ -1,4 +1,5 @@
 const initialState ={
+    user: null,
     topics:[
     //     {
     //         id: '1',

@@ -11,6 +11,8 @@ import { useState, useRef, useEffect } from 'react';
 
 function   AllTopics() {
 
+
+
 // // Obsługa dotku// 
 // const [x, setX] = useState(0);
 // const [startX, setStartX] = useState(0);
@@ -47,7 +49,7 @@ function   AllTopics() {
 //Dalej//
 
   const topics = useSelector(state => state.topics)
-  console.log('sadasdas', topics)
+
   let clicked = '' 
   let element = document.body;
   let pageWidth =getComputedStyle(element).width.slice(0,-2);
@@ -89,7 +91,7 @@ function   AllTopics() {
               </Card.Text>
             </Card.Body>
             <div>
-                            <div class={styles.wrapper}>
+              <div class={styles.wrapper}>
                 <div class={styles.link_wrapper}>
                   <NavLink to={'/opis/' + topic.id}>Więcej informacji</NavLink>
                   <div class={styles.icon}>
